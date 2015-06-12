@@ -1,0 +1,19 @@
+<apex:page controller="CnP_PaaS.CnP_Rollup" title="C&P Rollup">
+<apex:form >
+<apex:pageMessages />
+
+ <apex:pageBlock >
+            <apex:pageBlockButtons > 
+             
+                <apex:commandButton value="Campaign Rollup From Version 3.X to 4.X" action="{!camprollup}" style="margin-left:-134px;"/>
+                <apex:commandButton value="Custom Question Rollup Version 3.X to 4.X" action="{!cqrollup}"/>
+                <apex:commandButton value="Application Name Version 4.x to 5.x" action="{!applicationrollup}"/>
+            </apex:pageBlockButtons>
+            <apex:outputText >
+               Click on respective button to Rollup.
+            </apex:outputText>
+             </apex:pageBlock>
+             
+</apex:form>
+
+</apex:page>

@@ -1,0 +1,10 @@
+<apex:page standardController="Contact" id="assetOnContact">
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+  This is your new Page
+
+  List assetList = [SELECT AccountId, Account_Manager__c, Application__c, Id, Name, Booking_Date__c, Booking_System__c, IsCompetitorProduct, ContactId, Contract_Number__c, CreatedById, CreatedDate, IsDeleted, Description, Global_Grouping__c, InstallDate, JCI_Part_Number__c, JCI_Product__c, LastModifiedById, LastModifiedDate, Price, Product2Id, PurchaseDate, Quantity, Sales_Lead__c, SerialNumber, Status, SystemModstamp, UsageEndDate FROM Asset
+Where AccountId='001Q000000QlzOpIAJ']
+  
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

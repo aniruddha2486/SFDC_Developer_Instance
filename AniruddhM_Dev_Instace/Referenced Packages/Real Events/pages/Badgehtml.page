@@ -1,0 +1,60 @@
+<apex:page standardController="rie__Badge__c" showHeader="false" renderAs="html">
+<html>
+ <head>
+
+<style>
+
+@page {
+    size: 4.01in 3.01in ;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5000;
+
+}
+
+body {
+
+ background-image: url({!rie__Badge__c.rie__Badge_Config__r.rie__Badge_Image_URL__c});
+ background-repeat: no-repeat;
+ }
+
+</style> 
+
+  <style> 
+    
+     body {font-family: Arial Unicode MS;}
+     .companyName {
+    font-weight:bold;
+    font-size:16px;
+    color:black}  
+    
+       .idhidden{
+    align:left;
+    font-weight:bold;
+    font-size:12px;
+    color:black} 
+  </style>
+ </head>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+     <apex:panelGrid columns="2" width="100%">
+         <apex:panelGroup >
+         <apex:image url="{!rie__Badge__c.rie__Badge_QR_Code__c}" width="125" height="125"  ></apex:image>
+         </apex:panelGroup>
+            <apex:panelGroup styleClass="companyName" >
+                <apex:outputText styleClass="companyName" value="{!rie__Badge__c.rie__Registration__r.rie__Contact__r.name}"/><br></br>
+
+
+                <apex:outputText styleClass="idhidden" value="{!rie__Badge__c.rie__Registration__r.rie__Account__r.name}"/><br></br>
+                <apex:outputText styleClass="idhidden" value="{!rie__Badge__c.rie__Registration__c}"/>
+            </apex:panelGroup>
+     </apex:panelGrid>
+
+</html>
+</apex:page>
